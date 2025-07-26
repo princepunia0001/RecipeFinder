@@ -1,5 +1,5 @@
 // API Configuration
-const API_KEY = 'd62fa017f76547bba810b1046e36f21a'; // Replace with your actual API key
+const API_KEY = '4f266467091d4bb68fd32fe030e1e4e5'; // Replace with your actual API key
 const BASE_URL = 'https://api.spoonacular.com/recipes';
 
 // DOM Elements
