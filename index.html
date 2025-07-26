@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder - Discover Healthy Recipes</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Recipe Finder</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#recipes" class="nav-link">Recipes</a></li>
+                    <li><a href="#categories" class="nav-link">Categories</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-search-mobile">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="btn-menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Find Your Perfect <span class="highlight">Healthy Recipe</span></h2>
+                <p class="hero-subtitle">Discover thousands of delicious and nutritious recipes from around the world</p>
+                
+                <!-- Search Container -->
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Search for recipes, ingredients..." class="search-input">
+                        <button id="searchBtn" class="search-btn">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Filters -->
+                <div class="quick-filters">
+                    <span class="filter-label">Popular:</span>
+                    <button class="filter-tag" data-filter="healthy">Healthy</button>
+                    <button class="filter-tag" data-filter="vegetarian">Vegetarian</button>
+                    <button class="filter-tag" data-filter="quick">Quick Meals</button>
+                    <button class="filter-tag" data-filter="dessert">Desserts</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Recipes Section -->
+    <section class="health-recipes" id="recipes">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Health Recipes</h3>
+                <p class="section-subtitle">Nutritious and delicious recipes for a healthy lifestyle</p>
+            </div>
+
+            <div class="featured-recipes">
+                <div class="recipe-card featured">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop" alt="Keto Salad" class="recipe-img">
+                        <div class="recipe-badge">Featured</div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">5.0</span>
+                        </div>
+                        <h4 class="recipe-title">Keto Salad</h4>
+                        <p class="recipe-description">Fresh and healthy keto-friendly salad with avocado and mixed greens</p>
+                        <div class="recipe-meta">
+                            <span class="recipe-time">
+                                <i class="far fa-clock"></i>
+                                15 min
+                            </span>
+                            <span class="recipe-servings">
+                                <i class="fas fa-users"></i>
+                                2 servings
+                            </span>
+                            <span class="recipe-difficulty">
+                                <i class="fas fa-signal"></i>
+                                Easy
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-card featured">
+                    <div class="recipe-image">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop" alt="Smoothie Bowl" class="recipe-img">
+                        <div class="recipe-badge">Popular</div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.8</span>
+                        </div>
+                        <h4 class="recipe-title">Smoothie Bowl</h4>
+                        <p class="recipe-description">Nutritious smoothie bowl topped with fresh fruits and nuts</p>
+                        <div class="recipe-meta">
+                            <span class="recipe-time">
+                                <i class="far fa-clock"></i>
+                                10 min
+                            </span>
+                            <span class="recipe-servings">
+                                <i class="fas fa-users"></i>
+                                1 serving
+                            </span>
+                            <span class="recipe-difficulty">
+                                <i class="fas fa-signal"></i>
+                                Easy
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Popular Categories</h3>
+                <p class="section-subtitle">Browse recipes by your favorite categories</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card" data-category="mushroom-salad">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?w=300&h=200&fit=crop" alt="Mushroom Salad">
+                    </div>
+                    <div class="category-content">
+                        <h4 class="category-title">Mushroom Salad</h4>
+                        <div class="category-rating">
+                            <div class="stars small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">156 recipes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="pasta-salad">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=300&h=200&fit=crop" alt="Pasta Salad">
+                    </div>
+                    <div class="category-content">
+                        <h4 class="category-title">Pasta Salad</h4>
+                        <div class="category-rating">
+                            <div class="stars small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">243 recipes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="soup-salad">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=300&h=200&fit=crop" alt="Soup Salad">
+                    </div>
+                    <div class="category-content">
+                        <h4 class="category-title">Soup Salad</h4>
+                        <div class="category-rating">
+                            <div class="stars small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">89 recipes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="green-salad">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop" alt="Green Salad">
+                    </div>
+                    <div class="category-content">
+                        <h4 class="category-title">Green Salad</h4>
+                        <div class="category-rating">
+                            <div class="stars small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">334 recipes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Newsletter Section -->
+<section class="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <h3 class="newsletter-title">Get Recipe Updates</h3>
+            <p class="newsletter-subtitle">Subscribe to receive the latest healthy recipes and cooking tips</p>
+            
+            <!-- Subscriber Count Display -->
+            <div class="subscriber-info">
+                <span class="subscriber-count">0 subscribers</span>
+                <span class="subscriber-text">Join our recipe community!</span>
+            </div>
+            
+            <form class="newsletter-form">
+                <input type="email" 
+                       placeholder="Enter your email address" 
+                       class="newsletter-input"
+                       required
+                       maxlength="254">
+                <button type="submit" class="newsletter-btn">
+                    <i class="fas fa-envelope"></i>
+                    Subscribe
+                </button>
+            </form>
+            
+            <!-- Newsletter Features -->
+            <div class="newsletter-features">
+                <div class="feature">
+                    <i class="fas fa-utensils"></i>
+                    <span>Weekly Recipes</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bell"></i>
+                    <span>New Dish Alerts</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-gift"></i>
+                    <span>Exclusive Tips</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">Recipe Finder</h4>
+                    <p class="footer-text">Discover delicious and healthy recipes from around the world.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5 class="footer-subtitle">Categories</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Healthy Recipes</a></li>
+                        <li><a href="#">Vegetarian</a></li>
+                        <li><a href="#">Quick Meals</a></li>
+                        <li><a href="#">Desserts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5 class="footer-subtitle">About</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Recipe Finder. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Finding delicious recipes...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
